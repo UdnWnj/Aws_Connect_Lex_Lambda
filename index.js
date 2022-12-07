@@ -33,14 +33,14 @@ exports.handler = (event, context, callback) => {
     console.log(`Request received: ${JSON.stringify(event)}`);
     dispatch(event, (response) => {
       console.log(
-        `进入processProductInfo(),已执行完毕,返回值是:${JSON.stringify(
+        `進入processProductInfo(),已執行完畢,返回值是:${JSON.stringify(
           response
         )}`
       );
       callback(null, response);
     });
   } catch (err) {
-    console.log('出错了：' + err);
+    console.log('出錯了：' + err);
     callback(err);
   }
 };
@@ -244,7 +244,7 @@ function processtestIntent(event, callback) {
   }
 
   if (slot1 == null) {
-    message = '请输入曹植1';
+    message = '請輸入曹植1';
     callback(
       ElicitSlotMessage(
         intentName,
@@ -257,7 +257,7 @@ function processtestIntent(event, callback) {
       )
     );
   } else if (slot2 == null) {
-    message = '请输入曹植2';
+    message = '請輸入曹植2';
     callback(
       ElicitSlotMessage(
         intentName,
